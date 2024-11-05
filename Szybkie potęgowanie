@@ -1,0 +1,28 @@
+#include <iostream>
+ 
+long long szybkiePotegowanie(long long a, long long n) {
+    long long wynik = 1; 
+ 
+    while (n > 0) { 
+        if (n % 2 == 1) { 
+            wynik *= a; 
+        }
+        a *= a; 
+        n /= 2; 
+    } 
+ 
+    return wynik;
+}
+ 
+int main() {
+    long long a, n;
+    std::cout << "Podaj baze (a): ";
+    std::cin >> a;
+    std::cout << "Podaj wykladnik (n): ";
+    std::cin >> n;
+ 
+    long long wynik = szybkiePotegowanie(a, n);
+    std::cout << a << "^" << n << " = " << wynik << std::endl;
+ 
+    return 0;
+}

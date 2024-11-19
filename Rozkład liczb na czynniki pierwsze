@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Podaj liczbe n: ";
+    cin >> n;
+
+    for (int k = 2; n > 1; ++k) {
+        while (n % k == 0) {
+            cout << k << " ";  
+            n /= k;             
+        }
+    }
+
+    cout << endl;
+    return 0;
+}
